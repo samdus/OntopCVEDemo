@@ -1,0 +1,56 @@
+5:05:14 p.m.: Executing 'dependencyCheckAnalyze'...
+
+Starting Gradle Daemon...
+Gradle Daemon started in 2 s 755 ms
+
+> Task :dependencyCheckAnalyze
+Verifying dependencies for project OntopCVEDemo
+Checking for updates and analyzing dependencies for vulnerabilities
+Generating report for project OntopCVEDemo
+Found 15 vulnerabilities in project OntopCVEDemo
+
+
+One or more dependencies were identified with known vulnerabilities in OntopCVEDemo:
+
+gson-2.8.1.jar (pkg:maven/com.google.code.gson/gson@2.8.1, cpe:2.3:a:google:gson:2.8.1:*:*:*:*:*:*:*) : CVE-2022-25647
+jackson-databind-2.13.5.jar (pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.5, cpe:2.3:a:fasterxml:jackson-databind:2.13.5:*:*:*:*:*:*:*) : CVE-2023-35116
+log4j-1.2.17.jar (pkg:maven/log4j/log4j@1.2.17, cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*) : CVE-2019-17571, CVE-2020-9493, CVE-2022-23305, CVE-2022-23302, CVE-2022-23307, CVE-2021-4104, CVE-2023-26464
+logback-core-1.2.9.jar (pkg:maven/ch.qos.logback/logback-core@1.2.9, cpe:2.3:a:qos:logback:1.2.9:*:*:*:*:*:*:*) : CVE-2023-6378
+rdf4j-queryparser-serql-2.2.2.jar (pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-serql@2.2.2, cpe:2.3:a:eclipse:rdf4j:2.2.2:*:*:*:*:*:*:*) : CVE-2018-1000644
+rdf4j-sail-base-2.2.2.jar (pkg:maven/org.eclipse.rdf4j/rdf4j-sail-base@2.2.2, cpe:2.3:a:eclipse:rdf4j:2.2.2:*:*:*:*:*:*:*) : CVE-2018-1000644
+rdf4j-sail-inferencer-2.2.2.jar (pkg:maven/org.eclipse.rdf4j/rdf4j-sail-inferencer@2.2.2, cpe:2.3:a:eclipse:rdf4j:2.2.2:*:*:*:*:*:*:*) : CVE-2018-1000644
+rdf4j-sail-memory-2.2.2.jar (pkg:maven/org.eclipse.rdf4j/rdf4j-sail-memory@2.2.2, cpe:2.3:a:eclipse:rdf4j:2.2.2:*:*:*:*:*:*:*) : CVE-2018-1000644
+rdf4j-sail-model-2.2.2.jar (pkg:maven/org.eclipse.rdf4j/rdf4j-sail-model@2.2.2, cpe:2.3:a:eclipse:rdf4j:2.2.2:*:*:*:*:*:*:*) : CVE-2018-1000644
+
+
+See the dependency-check report for more details.
+
+
+
+Region [NODEAUDIT] : Not alive and dispose was called, filename: NODEAUDIT
+Region [CENTRAL] : Not alive and dispose was called, filename: CENTRAL
+Region [POM] : Not alive and dispose was called, filename: POM
+
+> Task :dependencyCheckAnalyze FAILED
+1 actionable task: 1 executed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':dependencyCheckAnalyze'.
+>
+
+  Dependency-Analyze Failure:
+  One or more dependencies were identified with vulnerabilities that have a CVSS score greater than '7,0': CVE-2022-23307, CVE-2021-4104, CVE-2022-25647, CVE-2022-23305, CVE-2023-26464, CVE-2022-23302, CVE-2019-17571, CVE-2020-9493, CVE-2023-6378, CVE-2018-1000644
+  See the dependency-check report for more details.
+
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 24s
+5:05:39 p.m.: Execution finished 'dependencyCheckAnalyze'.

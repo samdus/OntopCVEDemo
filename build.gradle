@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.owasp:dependency-check-gradle:9.0.9'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'org.owasp.dependencycheck'
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+//    ontopVersion = "5.2.0-SNAPSHOT"
+    ontopVersion = "5.1.2"
+}
+
+dependencies {
+    implementation "it.unibz.inf.ontop:ontop:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-binding:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-core:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-model:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-rdb:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-system-sql-core:$ontopVersion"
+    implementation "it.unibz.inf.ontop:ontop-system-sql-owlapi:$ontopVersion"
+}
+
+project.dependencyCheck {
+    nvd {
+        apiKey = '135183f9-8a94-4e3f-be67-66b99864a39d'
+        delay = 16000
+    }
+    failBuildOnCVSS = 7F
+}
