@@ -5,6 +5,7 @@ This project illustrates the CVE detection for the issue: https://github.com/ont
 
 == Output
 
+The report is available in the file link:dependency-check-report.html[].
 When executing the dependencyCheckAnalyze task, the following output is produced:
 
 [source,text]
