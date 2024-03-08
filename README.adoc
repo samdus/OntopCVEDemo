@@ -1,3 +1,14 @@
+= Demo Ontop CVE
+
+== Introduction
+This project illustrates the CVE detection for the issue: https://github.com/ontop/ontop/issues/795
+
+== Output
+
+When executing the dependencyCheckAnalyze task, the following output is produced:
+
+[source,text]
+----
 5:05:14 p.m.: Executing 'dependencyCheckAnalyze'...
 
 Starting Gradle Daemon...
@@ -54,3 +65,4 @@ Execution failed for task ':dependencyCheckAnalyze'.
 
 BUILD FAILED in 24s
 5:05:39 p.m.: Execution finished 'dependencyCheckAnalyze'.
+----
